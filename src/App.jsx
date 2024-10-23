@@ -1,9 +1,14 @@
 import "./App.css";
+import Header from "./components/Header/Header";
+import Main from "./components/Main/Main";
 
 function App() {
   return (
     <>
-      <h1 className="text-4xl font-bold">Knowledge Cafe</h1>
+      <div className="w-11/12 lg:w-3/4 mx-auto">
+        <Header></Header>
+        <Main></Main>
+      </div>
     </>
   );
 }
