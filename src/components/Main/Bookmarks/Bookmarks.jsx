@@ -1,15 +1,14 @@
-const Bookmarks = () => {
+import Bookmark from "../Bookmark/Bookmark";
+const Bookmarks = ({ bookmarks }) => {
   return (
-    <>
-      <div className="lg:col-span-1">
-        <div className="text-2xl font-bold text-purple-800 bg-purple-200 p-6 border border-purple-800 rounded-xl text-center">
-          <h3>Spent time on read : 177 min</h3>
-        </div>
-        <div className="bg-gray-200 p-8 rounded-xl mt-8">
-          <h3 className="text-3xl font-bold">Bookmarked Blogs:8</h3>
-        </div>
-      </div>
-    </>
+    <div className="bg-gray-100 rounded-xl p-4">
+      <h3 className="text-3xl font-bold text-center">
+        Bookmarked Blogs: {bookmarks.length}
+      </h3>
+      {bookmarks.map((bookmark, index) => (
+        <Bookmark key={index} bookmark={bookmark}></Bookmark>
+      ))}
+    </div>
   );
 };
 
